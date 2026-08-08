@@ -1,0 +1,27 @@
+{
+  "name": "disney-plus-ui",
+  "version": "1.0.0",
+  "description": "Disney+ streaming platform interface recreation featuring dynamic content, responsive design, and TMDB API integration",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Open index.html in your browser to view the application'"
+  },
+  "keywords": [
+    "disney-plus",
+    "streaming",
+    "tmdb-api",
+    "frontend",
+    "responsive-design",
+    "javascript",
+    "html5",
+    "css3",
+    "movie-app",
+    "api-integration"
+  ],
+  "author": "NatashaBaudelaire",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NatashaBaudelaire/disneyplusui.git"
+  }
+}
