@@ -4,6 +4,10 @@
 .env.*.local
 .env.example
 
+# Vercel
+.vercel/
+.vercel/deployments/
+
 # Logs
 logs
 *.log
