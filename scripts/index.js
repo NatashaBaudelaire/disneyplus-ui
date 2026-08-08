@@ -7,6 +7,14 @@ const BASE_URL_IMAGE = {
   smallFallback: 'https://image.tmdb.org/t/p/w780'
 }
 
+// 4K image quality settings
+const IMAGE_QUALITY = {
+  primary: 'original',  // Highest quality for featured images
+  thumbnail: 'w3840',   // 4K UHD resolution for thumbnails
+  fallback1: 'w1280',   // HD fallback
+  fallback2: 'w780'     // SD fallback
+}
+
 const movies = []
 let movieActive = ''
 const moviesElement = document.getElementById('movies')
@@ -50,10 +58,12 @@ function setMainMovie(movie) {
 
   appImage.setAttribute('src', movie.image.original)
   
-  // Add error handling for main image with automatic fallback
+  // Add error handling for main image with automatic fallback chain for 4K quality
   appImage.onerror = function() {
     if (movie.image.fallback) {
       this.src = movie.image.fallback;
+    } else if (movie.image.smallFallback) {
+      this.src = movie.image.smallFallback;
     }
   };
 }
@@ -176,12 +186,13 @@ async function getMovieData(movieId, type = 'movie') {
       const releaseYear = releaseDate !== 'N/A' ? releaseDate.split('-')[0] : 'N/A';
 
       // Build image URLs with automatic fallback to best available quality
+      // Priority: original (max quality) → w3840 (4K UHD) → w1280 (HD) → w780 (SD)
       const backdropPath = data.backdrop_path;
       const imageUrls = {
-        original: BASE_URL_IMAGE.original + backdropPath,
-        small: BASE_URL_IMAGE.small + backdropPath,
-        fallback: BASE_URL_IMAGE.fallback + backdropPath,
-        smallFallback: BASE_URL_IMAGE.smallFallback + backdropPath
+        original: BASE_URL_IMAGE.original + backdropPath,        // Highest quality, no resolution limit
+        small: BASE_URL_IMAGE.small + backdropPath,              // 4K UHD (3840px width)
+        fallback: BASE_URL_IMAGE.fallback + backdropPath,        // HD (1280px width)
+        smallFallback: BASE_URL_IMAGE.smallFallback + backdropPath // SD (780px width)
       };
 
       const movieData = {
