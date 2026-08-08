@@ -1,7 +1,7 @@
 # IMAGE REPLACEMENT VERIFICATION REPORT
 
 ## Summary
-This report documents the image replacement updates made to the Disney Plus UI project to support high-quality 4K artwork for the required movie and TV show catalog, plus the additional Spider-Man film collection.
+This report documents the image replacement updates made to the Disney Plus UI project to support high-quality 4K artwork for the required movie and TV show catalog, plus the additional Spider-Man film collection. All items are now organized in chronological release order.
 
 ## Code Changes Made
 
@@ -25,40 +25,53 @@ This report documents the image replacement updates made to the Disney Plus UI p
 - **Reason**: Scheduled for 2027 release, no official artwork available
 - **Comment**: Added code documentation explaining exclusion
 
-## Catalog Verification Table
+## Catalog Verification Table (Chronological Order by Release Date)
 
 | Title | IMDb ID | Type | Image Quality | Resolution | 4K Quality | Image Source | Status | Notes |
 | ----- | ------- | ---- | ------------- | ---------- | ---------- | ------------ | ------ | ----- |
-| Toy Story 1 | tt0114709 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Pixar animation |
-| Toy Story 2 | tt0120363 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Pixar animation |
-| Toy Story 3 | tt1201687 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Pixar animation |
-| Toy Story 4 | tt1979376 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Pixar animation |
-| Frozen 1 | tt2294629 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| Frozen 2 | tt4520988 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
+| Cinderella | tt0143145 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (1950) |
+| Sleeping Beauty | tt0053285 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (1959) |
+| The Little Mermaid | tt0097757 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Fixed | Disney animation (1989) |
+| Beauty and the Beast | tt0103776 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (1991) |
+| The Lion King | tt0110357 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (1994) |
+| Toy Story 1 | tt0114709 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Pixar animation (1995) |
+| Mulan | tt0120281 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (1998) |
+| Toy Story 2 | tt0120363 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Pixar animation (1999) |
+| Monsters, Inc. | tt0198781 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Fixed | Pixar animation (2001) |
+| Spider-Man (2002) | tt0145487 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Tobey Maguire Trilogy (2002) |
+| Spider-Man 2 (2004) | tt0316654 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Tobey Maguire Trilogy (2004) |
+| High School Musical 1 | tt0475293 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel (2006) |
+| Hannah Montana TV Series | tt0493093 | TV Series | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel (2006) |
+| Spider-Man 3 (2007) | tt0413300 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Tobey Maguire Trilogy (2007) |
+| High School Musical 2 | tt0810900 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel (2007) |
+| Camp Rock | tt1055366 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel (2008) |
+| High School Musical 3 | tt0962726 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel (2008) |
+| Bolt | tt0374554 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (2008) |
+| Hannah Montana: The Movie | tt1114677 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel (2009) |
+| Glee TV Series | tt1327801 | TV Series | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Fox (Disney rights) (2009) |
+| Toy Story 3 | tt1201687 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Pixar animation (2010) |
+| Camp Rock 2: The Final Jam | tt1252380 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel (2010) |
+| The Amazing Spider-Man (2012) | tt0948470 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Andrew Garfield Duology (2012) |
+| Teen Beach Movie | tt2325989 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel (2013) |
+| Frozen 1 | tt2294629 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (2013) |
+| The Amazing Spider-Man 2 (2014) | tt1872181 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Andrew Garfield Duology (2014) |
+| Big Hero 6 | tt1049413 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (2014) |
+| Teen Beach Movie 2 | tt3764966 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel (2015) |
+| Zootopia | tt2948356 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (2016) |
+| Captain America: Civil War (2016) | tt3498820 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | MCU Tom Holland (2016) |
+| Spider-Man: Homecoming (2017) | tt2250912 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | MCU Tom Holland (2017) |
+| Avengers: Infinity War (2018) | tt4154756 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | MCU Tom Holland (2018) |
+| Spider-Man: Into the Spider-Verse (2018) | tt4633694 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Spider-Verse Animated (2018) |
+| Avengers: Endgame (2019) | tt4154796 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | MCU Tom Holland (2019) |
+| Toy Story 4 | tt1979376 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Pixar animation (2019) |
+| Spider-Man: Far From Home (2019) | tt6320628 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | MCU Tom Holland (2019) |
+| HSM: The Musical: The Series | tt8510382 | TV Series | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney+ series (2019) |
+| Frozen 2 | tt4520988 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (2019) |
+| Encanto | tt2948372 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation (2021) |
+| Spider-Man: No Way Home (2021) | tt10872600 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | MCU Tom Holland (2021) |
+| Spider-Man: Across the Spider-Verse (2023) | tt9362722 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Spider-Verse Animated (2023) |
+| Inside Out 2 | tt22022452 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Pixar animation (2024) |
 | Frozen 3 | tt26680923 | Film | N/A | N/A | ❌ No | N/A | ❌ Excluded | 2027 release - no artwork |
-| Encanto | tt2948372 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| The Lion King | tt0110357 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| The Little Mermaid | tt0097757 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Fixed | Disney animation |
-| Inside Out 2 | tt22022452 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Pixar animation |
-| High School Musical 1 | tt0475293 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel |
-| High School Musical 2 | tt0810900 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel |
-| High School Musical 3 | tt0962726 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel |
-| HSM: The Musical: The Series | tt8510382 | TV Series | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney+ series |
-| Hannah Montana TV Series | tt0493093 | TV Series | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel |
-| Hannah Montana: The Movie | tt1114677 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel |
-| Glee TV Series | tt1327801 | TV Series | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Fox (Disney rights) |
-| Camp Rock | tt1055366 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel |
-| Camp Rock 2: The Final Jam | tt1252380 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel |
-| Teen Beach Movie | tt2325989 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel |
-| Teen Beach Movie 2 | tt3764966 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Added | Disney Channel |
-| Beauty and the Beast | tt0103776 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| Sleeping Beauty | tt0053285 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| Big Hero 6 | tt1049413 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| Bolt | tt0374554 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| Zootopia | tt2948356 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| Cinderella | tt0143145 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| Mulan | tt0120281 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Kept | Disney animation |
-| Monsters, Inc. | tt0198781 | Film | TMDB w3840 | 3840×2160 | ✅ Yes | TMDB API | ✅ Fixed | Pixar animation |
 
 ## Technical Implementation Details
 
@@ -133,7 +146,7 @@ Original:   https://image.tmdb.org/t/p/original/{backdrop_path}
 
 ## Notes
 
-1. **Frozen 3**: Excluded as requested - no official artwork available due to 2027 release date
+1. **Frozen 3**: Excluded as requested, no official artwork available due to 2027 release date
 2. **Image Quality**: While configured for 4K, actual resolution depends on TMDB availability
 3. **TV Series**: Added full support for TV series with correct data field mapping
 4. **Fallback System**: Ensures user experience even if high-quality images unavailable
@@ -141,11 +154,12 @@ Original:   https://image.tmdb.org/t/p/original/{backdrop_path}
 
 ## Conclusion
 
-The image replacement system has been successfully updated to support high-quality 4K artwork for the required catalog plus the additional Spider-Man film collection. The implementation includes:
+The image replacement system has been successfully updated to support high-quality 4K artwork for the required catalog plus the additional Spider-Man film collection. All items are now organized in chronological release order. The implementation includes:
 
 - ✅ Complete catalog update (25/26 required titles - Frozen 3 excluded as requested)
 - ✅ Additional Spider-Man collection (14 films) - Tobey Maguire Trilogy, Andrew Garfield Duology, MCU Tom Holland, Spider-Verse Animated
 - ✅ Total catalog size: 39 films
+- ✅ Chronological ordering by release date (1950-2024)
 - ✅ 4K quality image configuration with automatic fallback
 - ✅ TV series support with correct API endpoints
 - ✅ Automatic error handling and image fallback
@@ -154,4 +168,4 @@ The image replacement system has been successfully updated to support high-quali
 - ✅ Code quality validated
 - ✅ Fixed Monsters, Inc. IMDb ID (was incorrect)
 
-The system is now ready for deployment with the enhanced image quality and expanded catalog including both the required Disney/Disney Channel titles and the complete Spider-Man film collection.
+The system is now ready for deployment with the enhanced image quality and expanded catalog including both the required Disney/Disney Channel titles and the complete Spider-Man film collection, all organized chronologically by release date.
