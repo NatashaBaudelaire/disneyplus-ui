@@ -66,6 +66,12 @@ body, button, textarea, input {
   font: 400 1rem "Montserrat", sans-serif;
 }
 
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+}
+
 a {
   color: inherit;
   text-decoration: none;
