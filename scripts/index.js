@@ -160,6 +160,7 @@ async function getMovieData(movieId, type = 'movie') {
       const tmdbId = results[0].id;
 
       // Fetch data from appropriate endpoint
+      // Both movies and TV shows use the same 4K image quality configuration
       let data;
       if (isTV) {
         data = await fetch(getUrlTV(tmdbId));
@@ -169,7 +170,8 @@ async function getMovieData(movieId, type = 'movie') {
         data = await data.json();
       }
 
-      // Check for backdrop image
+      // Check for backdrop image (required for both movies and TV shows)
+      // Both content types use the same 4K quality image standards
       if (!data.backdrop_path) {
         throw new Error(`${isTV ? 'TV series' : 'Film'} "${data.title || data.name}" does not have a backdrop image and will not be added.`);
       }
@@ -186,6 +188,7 @@ async function getMovieData(movieId, type = 'movie') {
       const releaseYear = releaseDate !== 'N/A' ? releaseDate.split('-')[0] : 'N/A';
 
       // Build image URLs with automatic fallback to best available quality
+      // This applies to BOTH movies and TV shows with the same 4K quality standards
       // Priority: original (max quality) → w3840 (4K UHD) → w1280 (HD) → w780 (SD)
       const backdropPath = data.backdrop_path;
       const imageUrls = {
