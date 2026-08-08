@@ -214,71 +214,48 @@ async function getMovieData(movieId, type = 'movie') {
 function loadMovies() {
 
   const LIST_MOVIES = [
-    // Disney / Pixar
-    'tt0114709', // Toy Story 1 (1995)
-    'tt0120363', // Toy Story 2 (1999)
-    'tt1201687', // Toy Story 3 (2010)
-    'tt1979376', // Toy Story 4 (2019)
-    'tt2294629', // Frozen 1 (2013)
-    'tt4520988', // Frozen 2 (2019)
-    // Frozen 3 (tt26680923) - Not included: scheduled for 2027 release, no official artwork available yet
-    'tt2948372', // Encanto (2021)
-    'tt0110357', // The Lion King (1994)
-    'tt0097757', // The Little Mermaid (1989)
-    'tt22022452', // Inside Out 2 (2024)
-    
-    // High School Musical
-    'tt0475293', // High School Musical 1 (2006)
-    'tt0810900', // High School Musical 2 (2007)
-    'tt0962726', // High School Musical 3 (2008)
-    'tt8510382', // High School Musical: The Musical: The Series (2019)
-    
-    // Hannah Montana
-    'tt0493093', // Hannah Montana — TV Series (2006)
-    'tt1114677', // Hannah Montana: The Movie (2009)
-    
-    // Glee
-    'tt1327801', // Glee — TV Series (2009)
-    
-    // Camp Rock
-    'tt1055366', // Camp Rock (2008)
-    'tt1252380', // Camp Rock 2: The Final Jam (2010)
-    
-    // Teen Beach Movie
-    'tt2325989', // Teen Beach Movie (2013)
-    'tt3764966', // Teen Beach Movie 2 (2015)
-    
-    // Additional Disney films from original list
-    'tt0103776', // Beauty and the Beast (1991)
-    'tt0053285', // Sleeping Beauty (1959)
-    'tt1049413', // Big Hero 6 (2014)
-    'tt0374554', // Bolt (2008)
-    'tt2948356', // Zootopia (2016)
-    'tt0143145', // Cinderella (1950)
-    'tt0120281', // Mulan (1998)
-    'tt0198781', // Monsters, Inc. (2001)
-    
-    // Spider-Man Films
-    // Tobey Maguire Trilogy
-    'tt0145487', // Spider-Man (2002)
-    'tt0316654', // Spider-Man 2 (2004)
-    'tt0413300', // Spider-Man 3 (2007)
-    
-    // Andrew Garfield Duology
-    'tt0948470', // The Amazing Spider-Man (2012)
-    'tt1872181', // The Amazing Spider-Man 2 (2014)
-    
-    // Marvel Cinematic Universe (MCU) – Tom Holland
-    'tt3498820', // Captain America: Civil War (2016)
-    'tt2250912', // Spider-Man: Homecoming (2017)
-    'tt4154756', // Avengers: Infinity War (2018)
-    'tt4154796', // Avengers: Endgame (2019)
-    'tt6320628', // Spider-Man: Far From Home (2019)
-    'tt10872600', // Spider-Man: No Way Home (2021)
-    
-    // Animated Films (Spider-Verse)
-    'tt4633694', // Spider-Man: Into the Spider-Verse (2018)
-    'tt9362722', // Spider-Man: Across the Spider-Verse (2023)
+    // Chronological Order by Release Date
+    'tt0143145', // Cinderella (1950) - February 15, 1950
+    'tt0053285', // Sleeping Beauty (1959) - January 29, 1959
+    'tt0097757', // The Little Mermaid (1989) - November 17, 1989
+    'tt0103776', // Beauty and the Beast (1991) - November 22, 1991
+    'tt0110357', // The Lion King (1994) - June 24, 1994
+    'tt0114709', // Toy Story 1 (1995) - November 22, 1995
+    'tt0120281', // Mulan (1998) - June 19, 1998
+    'tt0120363', // Toy Story 2 (1999) - November 24, 1999
+    'tt0198781', // Monsters, Inc. (2001) - November 2, 2001
+    'tt0145487', // Spider-Man (2002) - May 3, 2002
+    'tt0316654', // Spider-Man 2 (2004) - June 30, 2004
+    'tt0475293', // High School Musical 1 (2006) - January 20, 2006
+    'tt0493093', // Hannah Montana — TV Series (2006) - March 24, 2006
+    'tt0413300', // Spider-Man 3 (2007) - May 4, 2007
+    'tt0810900', // High School Musical 2 (2007) - August 17, 2007
+    'tt1055366', // Camp Rock (2008) - June 20, 2008
+    'tt0962726', // High School Musical 3 (2008) - October 24, 2008
+    'tt0374554', // Bolt (2008) - November 21, 2008
+    'tt1114677', // Hannah Montana: The Movie (2009) - April 10, 2009
+    'tt1327801', // Glee — TV Series (2009) - May 19, 2009
+    'tt1201687', // Toy Story 3 (2010) - June 18, 2010
+    'tt1252380', // Camp Rock 2: The Final Jam (2010) - September 3, 2010
+    'tt0948470', // The Amazing Spider-Man (2012) - July 3, 2012
+    'tt2325989', // Teen Beach Movie (2013) - July 19, 2013
+    'tt2294629', // Frozen 1 (2013) - November 27, 2013
+    'tt1872181', // The Amazing Spider-Man 2 (2014) - May 2, 2014
+    'tt1049413', // Big Hero 6 (2014) - November 7, 2014
+    'tt3764966', // Teen Beach Movie 2 (2015) - June 26, 2015
+    'tt2948356', // Zootopia (2016) - March 4, 2016
+    'tt3498820', // Captain America: Civil War (2016) - May 6, 2016
+    'tt2250912', // Spider-Man: Homecoming (2017) - July 7, 2017
+    'tt4154756', // Avengers: Infinity War (2018) - April 27, 2018
+    'tt4633694', // Spider-Man: Into the Spider-Verse (2018) - December 14, 2018
+    'tt4154796', // Avengers: Endgame (2019) - April 26, 2019
+    'tt1979376', // Toy Story 4 (2019) - June 21, 2019
+    'tt6320628', // Spider-Man: Far From Home (2019) - July 2, 2019
+    'tt8510382', // High School Musical: The Musical: The Series (2019) - November 12, 2019
+    'tt4520988', // Frozen 2 (2019) - November 22, 2019
+    'tt10872600', // Spider-Man: No Way Home (2021) - December 17, 2021
+    'tt9362722', // Spider-Man: Across the Spider-Verse (2023) - June 2, 2023
+    'tt22022452', // Inside Out 2 (2024) - June 14, 2024
   ];
   
   LIST_MOVIES.map(async (movie, index) => {
