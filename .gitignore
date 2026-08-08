@@ -2,6 +2,7 @@
 .env
 .env.local
 .env.*.local
+.env.example
 
 # Logs
 logs
@@ -9,10 +10,37 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn-error.log
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
 
 # OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
 # IDE
 .vscode/
@@ -20,3 +48,50 @@ Thumbs.db
 *.swp
 *.swo
 *~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+.history/
+*.sublime-project
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.patch
+
+# Documentation reports (generated files)
+*_REPORT.md
+DEPLOYMENT_AUDIT_REPORT.md
+PROJECT_ISSUES_REPORT.md
+IMAGE_REPLACEMENT_VERIFICATION.md
+
+# Debug files
+debug.log
+error.log
+*.stackdump
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Misc
+*.pid
+*.seed
+*.pid.lock
+.cache/
+.npm/
+.eslintcache
+.stylelintcache
+
+# Uploads and user content
+uploads/
+user-content/
+temp/
+tmp/
