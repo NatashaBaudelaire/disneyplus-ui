@@ -1,5 +1,5 @@
 const API_KEY = typeof process !== 'undefined' && process.env ? process.env.TMDB_API_KEY : '03c4e3dc470296959d6bf68804146538'
-const API_LANGUAGE = 'EN-GB'
+const API_LANGUAGE = 'en-GB'
 const BASE_URL_IMAGE = {
   original: 'https://image.tmdb.org/t/p/original',
   small: 'https://image.tmdb.org/t/p/w3840',
@@ -78,14 +78,14 @@ function changeMainMovie(movieId) {
     changeButtonMenu()
   } else  {
     console.error(movies)
-    console.error(`Could not find the film with id ${movieId}`)
+    console.error(`Could not find the movie with id ${movieId}`)
   }
 }
 
 function createButtonMovie(movieId) {
   const button = document.createElement('button')
   button.setAttribute('onclick', `changeMainMovie('${movieId}')`)
-  button.innerHTML = '<img src="./assets/icon-play-button.png" alt="Icon play button" />'
+  button.innerHTML = '<img src="./assets/icon-play-button.png" alt="Play button icon" />'
 
   return button
 }
@@ -97,7 +97,7 @@ function createImageMovie(movieImage, movieTitle) {
   const image = document.createElement('img')
 
   image.setAttribute('src', movieImage)
-  image.setAttribute('alt', `Image of the film ${movieTitle}`)
+  image.setAttribute('alt', `Image of the movie ${movieTitle}`)
   image.setAttribute('loading', 'lazy')
 
   // Add error handling for image loading with automatic fallback
