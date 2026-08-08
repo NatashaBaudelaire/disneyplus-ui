@@ -90,14 +90,14 @@ The application currently features a curated selection of **39 titles** organize
 
 ### Disney Channel Originals (9 titles)
 - High School Musical (2006)
-- Hannah Montana — TV Series (2006)
+- Hannah Montana - TV Series (2006)
 - Spider-Man 3 (2007)
 - High School Musical 2 (2007)
 - Camp Rock (2008)
 - High School Musical 3 (2008)
 - Bolt (2008)
 - Hannah Montana: The Movie (2009)
-- Glee — TV Series (2009)
+- Glee - TV Series (2009)
 
 ### Additional Films (6 titles)
 - Toy Story 3 (2010)
