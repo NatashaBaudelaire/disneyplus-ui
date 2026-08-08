@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="EN-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Disney Plus</title>
+    <meta name="description" content="Disney Plus Platform" />
+
+    <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/global.css" />
+  </head>
+  <body>
+    <div id="overlay"></div>
+
+    <div class="login-screen" id="loginScreen">
+      <div class="login-box">
+        <img src="./assets/logo-blue.png" alt="Disney+ Logo" class="logo" />
+        <h1 id="formTitle">Sign in with your email address</h1>
+        <p id="formSubtitle">Log in to Disney+ with your MyDisney account.</p>
+
+        <form id="authForm" onsubmit="return false;">
+          <div class="signup-field form-row">
+            <input type="text" id="firstNameInput" placeholder="First Name" />
+            <input type="text" id="lastNameInput" placeholder="Last Name" />
+          </div>
+          <input type="email" id="emailInput" placeholder="Email Address" required />
+          <div class="password-container">
+            <input type="password" id="passwordInput" placeholder="Password" required />
+            <button type="button" id="togglePassword" class="toggle-password" aria-label="Show password">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+            </button>
+          </div>
+          <div class="password-container signup-field">
+            <input type="password" id="confirmPasswordInput" placeholder="Confirm Password" />
+            <button type="button" id="toggleConfirmPassword" class="toggle-password" aria-label="Show password">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+            </button>
+          </div>
+          <a href="#" id="forgotPasswordLink" class="forgot-password login-info-text">
+            Forgotten your password?
+          </a>
+          <button id="authBtn">Continue</button>
+        </form>
+
+        <p class="error-message" id="loginError">Please enter a valid email address.</p>
+        <p class="login-info-text">
+          Disney+ is part of The Walt Disney family of companies.<br />
+          MyDisney allows you to log in seamlessly across services and
+          experiences across The Walt Disney family of companies, such as Disney+, ESPN,
+          Walt Disney World,
+          <a href="https://my.disney.com" target="_blank" rel="noopener noreferrer">and more</a>.
+        </p>
+        <p class="login-info-text" id="toggleFormText">
+          Don't have an account? <a href="#" id="toggleFormLink">Sign up.</a>
+        </p>
+        <img src="./assets/icons.png" alt="Icons" />
+      </div>
+    </div>
+
+<div id="app">
+      <div class="app__image">
+        <img
+          loading="lazy"
+          alt="Featured movie image"
+          src="https://image.tmdb.org/t/p/original/dqKq4c9lG5g3jY7jM3gV5l8m1n.jpg"
+        />
+      </div>
+
+      <header>
+        <img src="./assets/logo-white.png" alt="Disney Plus Logo" />
+
+        <div class="header__actions">
+          <button type="button" class="button__menu" onclick="changeButtonMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button id="logoutBtn">Sign out</button>
+        </div>
+
+        <nav class="navigation">
+          <h2>Film Lists</h2>
+
+          <form class="form" id="add__movie">
+            <input type="text" placeholder="Add your film" name="movie" />
+
+            <button type="submit" aria-label="Add your film">+</button>
+          </form>
+
+          <ul id="movies"></ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="feature__movie">
+          <div class="rating">
+            <img src="./assets/logo-imdb.png" alt="IMDB Logo" />
+            <strong></strong>
+          </div>
+
+          <span></span>
+          <h1></h1>
+          <p></p>
+
+          <button type="button" id="watchNowBtn">
+            <img src="./assets/icon-play.png" alt="Icon play" />
+            Watch Now
+          </button>
+        </section>
+      </main>
+    </div>
+    
+    <!-- Trailer Modal -->
+    <div id="trailerModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="closeModalBtn">&times;</span>
+        <iframe id="trailerVideo" src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    
+    <script src="./scripts/index.js"></script>
+    <script>
+      // DOM Elements
+      const authBtn = document.getElementById('authBtn');
+      const firstNameInput = document.getElementById('firstNameInput');
+      const lastNameInput = document.getElementById('lastNameInput');
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+      const confirmPasswordInput = document.getElementById('confirmPasswordInput');
+      const togglePassword = document.getElementById('togglePassword');
+      const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+      const loginError = document.getElementById('loginError');
+      const loginScreen = document.getElementById('loginScreen');
+      const app = document.getElementById('app');
+      const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+      const toggleFormLink = document.getElementById('toggleFormLink');
+      let isLoginMode = true;
+      const watchNowBtn = document.getElementById('watchNowBtn');
+      const trailerModal = document.getElementById('trailerModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const trailerVideo = document.getElementById('trailerVideo');
+
+      function isValidEmail(email) {
+        return /\S+@\S+\.\S+/.test(email);
+      }
+
+      toggleFormLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleFormMode();
+      });
+      const eyeIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>`;
+      const eyeOffIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L21.73 22 20.46 23.27 3.27 6 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"/></svg>`;
+
+      function setToggleIcon(button, isPassword) {
+        button.innerHTML = isPassword ? eyeIcon : eyeOffIcon;
+        button.setAttribute('aria-label', isPassword ? 'Show password' : 'Hide password');
+      }
+
+      togglePassword.addEventListener('click', () => {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        setToggleIcon(togglePassword, type === 'password');
+      });
+
+      toggleConfirmPassword.addEventListener('click', () => {
+        const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        confirmPasswordInput.setAttribute('type', type);
+        setToggleIcon(toggleConfirmPassword, type === 'password');
+      });
+
+     
+      setToggleIcon(togglePassword, true);
+      setToggleIcon(toggleConfirmPassword, true);
+
+      let registeredUsers = [];
+
+
+      function handleLogin() {
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        if (!isValidEmail(email)) {
+          loginError.textContent = 'Please enter a valid email address.';
+          loginError.style.display = 'block';
+          return;
+        } else if (password === '') {
+          loginError.textContent = 'Please enter your password.';
+          loginError.style.display = 'block';
+          return;
+        }
+
+        loginError.style.display = 'none';
+
+        const user = registeredUsers.find(u => u.email === email);
+
+        if (!user) {
+          loginError.textContent = 'This email address is not registered. Please sign up.';
+          loginError.style.display = 'block';
+        } else {
+
+          if (user.password === password) {
+            alert('Login successful!');
+            loginScreen.classList.remove('fade-in');
+            loginScreen.classList.add('fade-out');
+
+            setTimeout(() => {
+              loginScreen.style.display = 'none';
+
+              app.style.display = 'block';
+              app.classList.remove('fade-out');
+              void app.offsetWidth;
+              app.classList.add('fade-in');
+            }, 1000);
+          } else {
+
+            loginError.textContent = 'Incorrect password. Please try again.';
+            loginError.style.display = 'block';
+          }
+        }
+      }
+
+
+      function handleSignUp() {
+        const firstName = firstNameInput.value.trim();
+        const lastName = lastNameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+        const confirmPassword = confirmPasswordInput.value.trim();
+
+
+        if (!firstName) {
+          loginError.textContent = 'Please enter your first name.';
+        } else if (!lastName) {
+          loginError.textContent = 'Please enter your last name.';
+        } else if (!isValidEmail(email)) {
+          loginError.textContent = 'Please enter a valid email address.';
+        } else if (password.length < 6) {
+          loginError.textContent = 'Password must be at least 6 characters long.';
+        } else if (password !== confirmPassword) {
+          loginError.textContent = 'Passwords do not match.';
+        } else if (registeredUsers.some(u => u.email === email)) {
+          loginError.textContent = 'An account with this email address already exists.';
+        } else {
+
+          registeredUsers.push({ firstName, lastName, email, password });
+          console.log('Updated user database:', registeredUsers);
+
+
+          alert('Account created successfully! You can now sign in.');
+          toggleFormMode();
+          loginError.style.display = 'none';
+          emailInput.value = email;
+          passwordInput.value = '';
+          return;
+        }
+
+        loginError.style.display = 'block';
+      }
+
+
+      authBtn.addEventListener('click', () => {
+        if (isLoginMode) {
+          handleLogin();
+        } else {
+          handleSignUp();
+        }
+      });
+
+
+      forgotPasswordLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('To recover your password, please access your email provider:\n\n- Gmail\n- Outlook/Hotmail\n- Yahoo\n- Others');
+      });
+
+
+      function toggleFormMode() {
+        isLoginMode = !isLoginMode;
+        const signupFields = document.querySelectorAll('.signup-field');
+
+        document.getElementById('formTitle').textContent = isLoginMode ? 'Sign in with your email address' : 'Create your account';
+        document.getElementById('formSubtitle').textContent = isLoginMode ? 'Log in to Disney+ with your MyDisney account.' : 'Use your email address to create a new account.';
+        authBtn.textContent = isLoginMode ? 'Continue' : 'Sign Up';
+        document.getElementById('toggleFormText').innerHTML = isLoginMode ? `Don't have an account? <a href="#" id="toggleFormLink">Sign up.</a>` : `Already have an account? <a href="#" id="toggleFormLink">Sign in.</a>`;
+        forgotPasswordLink.style.display = isLoginMode ? 'block' : 'none';
+
+        signupFields.forEach(field => {
+          field.style.display = isLoginMode ? 'none' : 'block';
+        });
+
+
+        document.getElementById('toggleFormLink').addEventListener('click', (e) => {
+          e.preventDefault();
+          toggleFormMode();
+        });
+
+
+        loginError.style.display = 'none';
+        document.getElementById('authForm').reset();
+      }
+
+      toggleFormLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleFormMode();
+      });
+
+
+      logoutBtn.addEventListener('click', () => {
+        if (confirm('Are you sure you want to sign out?')) {
+          app.classList.remove('fade-in');
+          app.classList.add('fade-out');
+
+          setTimeout(() => {
+            app.style.display = 'none';
+
+            loginScreen.style.display = 'flex';
+            loginScreen.classList.remove('fade-out');
+            void loginScreen.offsetWidth;
+            loginScreen.classList.add('fade-in');
+
+
+            emailInput.value = '';
+            passwordInput.value = '';
+            firstNameInput.value = '';
+            lastNameInput.value = '';
+            confirmPasswordInput.value = '';
+            passwordInput.setAttribute('type', 'password');
+            confirmPasswordInput.setAttribute('type', 'password');
+            setToggleIcon(togglePassword, true);
+            setToggleIcon(toggleConfirmPassword, true);
+          }, 1000);
+        }
+      });
+
+      
+      watchNowBtn.addEventListener('click', () => {
+        const trailerKey = watchNowBtn.getAttribute('data-trailer-key');
+        if (trailerKey) {
+          trailerVideo.src = `https://www.youtube.com/embed/${trailerKey}?autoplay=1`;
+          trailerModal.classList.add('show');
+        } else {
+          alert("Sorry, a trailer could not be found for this film.");
+        }
+      });
+
+      function closeModal() {
+        trailerModal.classList.remove('show');
+        trailerVideo.src = ""; // Para o vídeo ao fechar
+      }
+
+      closeModalBtn.addEventListener('click', closeModal);
+
+      window.addEventListener('click', (event) => {
+        if (event.target == trailerModal) {
+          closeModal();
+        }
+      });
+      
+    </script>
+  </body>
+</html>
