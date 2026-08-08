@@ -256,7 +256,29 @@ function loadMovies() {
     'tt2948356', // Zootopia (2016)
     'tt0143145', // Cinderella (1950)
     'tt0120281', // Mulan (1998)
-    'tt0145487', // Monsters, Inc. (2001)
+    'tt0198781', // Monsters, Inc. (2001)
+    
+    // Spider-Man Films
+    // Tobey Maguire Trilogy
+    'tt0145487', // Spider-Man (2002)
+    'tt0316654', // Spider-Man 2 (2004)
+    'tt0413300', // Spider-Man 3 (2007)
+    
+    // Andrew Garfield Duology
+    'tt0948470', // The Amazing Spider-Man (2012)
+    'tt1872181', // The Amazing Spider-Man 2 (2014)
+    
+    // Marvel Cinematic Universe (MCU) – Tom Holland
+    'tt3498820', // Captain America: Civil War (2016)
+    'tt2250912', // Spider-Man: Homecoming (2017)
+    'tt4154756', // Avengers: Infinity War (2018)
+    'tt4154796', // Avengers: Endgame (2019)
+    'tt6320628', // Spider-Man: Far From Home (2019)
+    'tt10872600', // Spider-Man: No Way Home (2021)
+    
+    // Animated Films (Spider-Verse)
+    'tt4633694', // Spider-Man: Into the Spider-Verse (2018)
+    'tt9362722', // Spider-Man: Across the Spider-Verse (2023)
   ];
   
   LIST_MOVIES.map(async (movie, index) => {
