@@ -4,26 +4,20 @@
 
 ![Image](image.gif)
 
-***
-
 ## Table of Contents
 
 1. [Project Overview](#project-overview)  
-2. [Objective](#objective)  
-3. [Technologies Used](#technologies-used)  
-4. [Installation and Execution](#installation-and-execution)  
-5. [Key Concepts Applied](#key-concepts-applied)  
-6. [Movie & TV Show Catalog](#movie--tv-show-catalog)  
-7. [Image Quality](#image-quality)  
-8. [Contact](#contact)  
+2. [Technologies Used](#technologies-used)  
+3. [Installation and Execution](#installation-and-execution)  
+4. [Key Concepts Applied](#key-concepts-applied)  
+5. [Movie & TV Show Catalog](#movie--tv-show-catalog)  
+6. [Image Quality](#image-quality)  
+7. [Contact](#contact)  
 
-***
 
 ## Project Overview
 
 Disney Plus UI is a professional project that replicates the Disney+ interface using semantic HTML, advanced CSS with global variables and responsive design, JavaScript for dynamic integration with the TMDB API, and high-quality movie posters and images dynamically fetched from TMDB. The application features a comprehensive catalog of 39 titles including Disney/Pixar films, Disney Channel originals, TV series, and the complete Spider-Man film collection, all organized in chronological release order with 4K UHD image quality.
-
-***
 
 ## Technologies Used
 
@@ -32,8 +26,6 @@ Disney Plus UI is a professional project that replicates the Disney+ interface u
 - **JavaScript (ES6+)**  
 - **TMDB API (The Movie Database)**
 - **Montserrat Font** (Google Fonts)
-
-***
 
 ## Key Features
 
@@ -49,8 +41,6 @@ Disney Plus UI is a professional project that replicates the Disney+ interface u
 - **Smooth Transitions**: Fade-in and fade-out transitions for fluid navigation
 - **Login System**: Basic authentication with sign up/sign in functionality
 - **Password Visibility Toggle**: Show/hide password functionality with accessibility support
-
-***
 
 ## Movie & TV Show Catalog
 
@@ -114,7 +104,6 @@ The application currently features a curated selection of **39 titles** organize
 
 All movie and TV show data including titles, descriptions, ratings, and images are dynamically fetched from **The Movie Database (TMDB) API**.
 
-***
 
 ## Image Quality
 
@@ -138,7 +127,6 @@ The project implements a comprehensive 4K UHD image quality system:
 - No compression artifacts
 - Professional visual quality maintained across all content
 
-***
 
 ## Installation and Execution
 
@@ -158,8 +146,6 @@ git clone https://github.com/NatashaBaudelaire/disneyplusui.git
 3. Open the application in your browser
 4. Sign in or create an account to access the catalog
 
-***
-
 ## Key Concepts Applied
 
 - Semantic HTML5 structure
@@ -177,8 +163,6 @@ git clone https://github.com/NatashaBaudelaire/disneyplusui.git
 - Login/logout system with form validation
 - Password visibility toggle with accessibility
 - Error handling and user feedback
-
-***
 
 ## Contact
 
