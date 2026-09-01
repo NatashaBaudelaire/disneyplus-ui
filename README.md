@@ -4,13 +4,9 @@
 
 ![Image](image.gif)
 
-## Objective
-
-The main goal of this project was to recreate the Disney+ interface using modern web technologies, applying HTML5, CSS3 and JavaScript (ES6+). The content is dynamically generated through The Movie Database (TMDB) API, which provides detailed film and TV show information such as title, synopsis, cover image, background image, and rating. The project features a comprehensive catalog organized chronologically with 4K quality images for both movies and TV shows.
-
 ***
 
-## Contents
+## Table of Contents
 
 1. [Project Overview](#project-overview)  
 2. [Objective](#objective)  
