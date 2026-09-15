@@ -18,10 +18,10 @@ This guide explains how to deploy the Disney Plus UI project to Vercel.
    - Click "Add New Project"
    - Select "Import Git Repository"
    - Connect your GitHub account
-   - Select the `disneyplusui` repository
+   - Select the `disneyplus-ui` repository
 
 2. **Configure Project Settings**
-   - **Project Name**: `disney-plus-ui` (or your preferred name)
+   - **Project Name**: `disneyplus-ui` (or your preferred name)
    - **Framework Preset**: Other
    - **Root Directory**: `./` (leave as default)
    - **Build Command**: `node build.js`
@@ -36,7 +36,7 @@ This guide explains how to deploy the Disney Plus UI project to Vercel.
 4. **Deploy**
    - Click "Deploy"
    - Wait for deployment to complete (usually 1-2 minutes)
-   - Your site will be live at `https://disney-plus-ui.vercel.app`
+   - Your site will be live at `https://disneyplus-ui.vercel.app`
 
 ### Option 2: Deploy via Vercel CLI
 
@@ -52,7 +52,7 @@ This guide explains how to deploy the Disney Plus UI project to Vercel.
 
 3. **Deploy from Project Directory**
    ```bash
-   cd C:\Users\natas\Downloads\disney-plus-ui
+   cd C:\Users\natas\Downloads\disneyplus-ui
    vercel
    ```
 
