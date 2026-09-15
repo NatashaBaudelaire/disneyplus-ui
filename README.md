@@ -25,7 +25,7 @@ Disney Plus UI is a professional project that replicates the Disney+ interface u
 - **CSS3**  
 - **JavaScript (ES6+)**  
 - **TMDB API (The Movie Database)**
-- **Montserrat Font** (Google Fonts)
+- **Montserrat Font(Google Fonts)**
 
 ## Key Features
 
