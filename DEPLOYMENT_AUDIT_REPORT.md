@@ -4,7 +4,7 @@
 
 ### 1. Exposed API Key in Production Code
 **Location:** `scripts/index.js` line 1
-**Problem:** Hardcoded TMDB API key (`03c4e3dc470296959d6bf68804146538`) is exposed in client-side JavaScript
+**Problem:** Hardcoded TMDB API key (`<redacted>`) was exposed in client-side JavaScript
 **Impact:** Security vulnerability - API key can be extracted by anyone viewing the source code
 **Recommended Fix:** Move API key to server-side proxy or environment variables that are not exposed to client
 **Priority:** CRITICAL
