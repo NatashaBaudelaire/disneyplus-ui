@@ -1,5 +1,5 @@
 {
-  "name": "disney-plus-ui",
+  "name": "disneyplus-ui",
   "version": "1.0.0",
   "description": "Disney+ streaming platform interface recreation featuring dynamic content, responsive design, and TMDB API integration",
   "main": "index.html",
@@ -23,6 +23,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NatashaBaudelaire/disneyplusui.git"
+    "url": "https://github.com/NatashaBaudelaire/disneyplus-ui.git"
   }
 }
