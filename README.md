@@ -136,15 +136,19 @@ git clone https://github.com/NatashaBaudelaire/disneyplusui.git
 ```
 
 ### 2. Requirements  
-- Code editor (e.g., Visual Studio Code)  
-- Local server extension (e.g., Live Server)  
+- Node.js (for the local development server)  
 - Modern web browser
 
 ### 3. Run the project
 1. Open the project folder in your code editor
-2. Start a local server (e.g., using Live Server extension)
-3. Open the application in your browser
-4. Sign in or create an account to access the catalog
+2. Copy `.env.example` to `.env` and add your own TMDB API key
+3. Start the development server with `npm start`
+4. Open `http://localhost:3000` in your browser
+5. Sign in or create an account to access the catalog
+
+> Note: The TMDB API key is read from the `TMDB_API_KEY` environment variable.
+> There is no hardcoded fallback key, so the `.env` file is required for local
+> development. See `.env.example` for details.
 
 ## Key Concepts Applied
 
