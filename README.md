@@ -1,5 +1,5 @@
 <h1 align="center">
-  Disney Plus UI
+  Disney+ UI
 </h1>
 
 ![Image](image.gif)
@@ -17,7 +17,7 @@
 
 ## Project Overview
 
-Disney Plus UI is a professional project that replicates the Disney+ interface using semantic HTML, advanced CSS with global variables and responsive design, JavaScript for dynamic integration with the TMDB API, and high-quality movie posters and images dynamically fetched from TMDB. The application features a comprehensive catalog of 39 titles including Disney/Pixar films, Disney Channel originals, TV series, and the complete Spider-Man film collection, all organized in chronological release order with 4K UHD image quality.
+Disney+ UI is a professional project that replicates the Disney+ interface using semantic HTML, advanced CSS with global variables and responsive design, JavaScript for dynamic integration with the TMDB API, and high-quality movie posters and images dynamically fetched from TMDB. The application features a comprehensive catalog of 39 titles including Disney/Pixar films, Disney Channel originals, TV series, and the complete Spider-Man film collection, all organized in chronological release order with 4K UHD image quality.
 
 ## Technologies Used
 
