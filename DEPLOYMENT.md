@@ -6,7 +6,7 @@ This guide explains how to deploy the Disney Plus UI project to Vercel.
 
 - GitHub account with the project repository
 - Vercel account (free tier available)
-- TMDB API key (already configured in project)
+- TMDB API key (see [Environment Variables](#environment-variables))
 
 ## Deployment Steps
 
@@ -24,8 +24,8 @@ This guide explains how to deploy the Disney Plus UI project to Vercel.
    - **Project Name**: `disney-plus-ui` (or your preferred name)
    - **Framework Preset**: Other
    - **Root Directory**: `./` (leave as default)
-   - **Build Command**: Leave empty (static site)
-   - **Output Directory**: Leave empty (root directory)
+   - **Build Command**: `node build.js`
+   - **Output Directory**: `dist`
 
 3. **Environment Variables**
    - Add environment variable:
@@ -70,9 +70,8 @@ This guide explains how to deploy the Disney Plus UI project to Vercel.
 ## Configuration Files
 
 ### vercel.json
-- Configures routing and security headers
-- Sets up cache policies
-- Enables custom headers for security
+- Declares the build command and output directory (`node build.js` -> `dist`)
+- The build injects `TMDB_API_KEY` from Vercel environment variables into the static output at build time
 
 ### package.json
 - Contains project metadata
