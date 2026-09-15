@@ -132,7 +132,7 @@ The project implements a comprehensive 4K UHD image quality system:
 
 ### 1. Clone the repository  
 ```bash
-git clone https://github.com/NatashaBaudelaire/disneyplusui.git
+git clone https://github.com/NatashaBaudelaire/disneyplus-ui.git
 ```
 
 ### 2. Requirements  
