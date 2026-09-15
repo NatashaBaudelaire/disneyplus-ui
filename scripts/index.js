@@ -1,5 +1,12 @@
-const API_KEY = typeof process !== 'undefined' && process.env ? process.env.TMDB_API_KEY : '03c4e3dc470296959d6bf68804146538'
+const API_KEY =
+  (typeof process !== 'undefined' && process.env && process.env.TMDB_API_KEY) ||
+  (window.ENV && window.ENV.TMDB_API_KEY) ||
+  ''
 const API_LANGUAGE = 'en-GB'
+
+if (!API_KEY) {
+  console.error('TMDB_API_KEY is not configured. Create a .env file (see .env.example) and run "npm start", or set the TMDB_API_KEY environment variable when building or deploying.')
+}
 const BASE_URL_IMAGE = {
   original: 'https://image.tmdb.org/t/p/original',
   small: 'https://image.tmdb.org/t/p/w3840',
