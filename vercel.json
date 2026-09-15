@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "disney-plus-ui",
+  "name": "disneyplus-ui",
   "buildCommand": "node build.js",
   "outputDirectory": "dist"
 }
