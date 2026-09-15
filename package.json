@@ -4,7 +4,8 @@
   "description": "Disney+ streaming platform interface recreation featuring dynamic content, responsive design, and TMDB API integration",
   "main": "index.html",
   "scripts": {
-    "start": "echo 'Open index.html in your browser to view the application'"
+    "start": "node server.js",
+    "build": "node build.js"
   },
   "keywords": [
     "disney-plus",
